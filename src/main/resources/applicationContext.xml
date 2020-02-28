@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id = "testBean"
+          class="com.mihaibargau.lab.TestBean">
+        <constructor-arg value="Andries..."/>
+    </bean>
+
+    <bean id = "musicBean"
+          class="com.mihaibargau.lab.ClassicalMusic">
+    </bean>
+
+    <bean id="musicPlayer"
+          class="com.mihaibargau.lab.MusicPlayer">
+        <constructor-arg ref = "musicBean"></constructor-arg>
+    </bean>
+
+</beans>
